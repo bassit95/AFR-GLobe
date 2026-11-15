@@ -1,0 +1,39 @@
+/* Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+@import "tailwindcss";
+
+/* Utilitaires Typographiques Éditoriaux */
+
+
+.impact {
+  font-family: 'Impact', 'Arial Narrow Bold', 'Haettenschweiler', 'Arial Black', sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+}
+
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+/* Gestion du défilement pour les utilisateurs préférant la réduction de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
+}

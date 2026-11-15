@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "laravel/telescope": "^5.27"
+    },
+    "require": {
+        "laravel/pulse": "^1.8"
+    }
+}
